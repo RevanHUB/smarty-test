@@ -23,7 +23,7 @@ $smarty = new Smarty();
 //'templates' is where you store the files.
 $smarty->setTemplateDir(MY_PHP_ROOT . "/smarty/templates");
 //Create this directory if this does not exist
-// $smarty->setCompileDir(MY_PHP_ROOT . "/smarty/templates_c");
+$smarty->setCompileDir(MY_PHP_ROOT . "/smarty/templates_c");
 //Create this directory if this does not exist
 $smarty->setCacheDir(MY_PHP_ROOT . "/smarty/cache");
 //http://www.smarty.net/docs/en/config.files.tpl

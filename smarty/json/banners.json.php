@@ -3,7 +3,7 @@ $banners_json = <<< JSON
 {
     "banners":[
         {
-            "banner_src":"img/homepage/banner1.jpg",
+            "banner_src":"img/banner/banner1.jpg",
             "alt":"Banner1",
             "title": "Sample 1",
             "link":{
@@ -12,7 +12,7 @@ $banners_json = <<< JSON
             }
         },
         {
-            "banner_src":"img/homepage/banner2.jpg",
+            "banner_src":"img/banner/banner2.jpg",
             "alt":"Banner2",
             "title": "Sample 2",
             "link":{
@@ -21,7 +21,7 @@ $banners_json = <<< JSON
             }
         },
         {
-            "banner_src":"img/homepage/banner3.jpg",
+            "banner_src":"img/banner/banner3.jpg",
             "alt":"Banner3",
             "title": "Sample 3",
             "link":{

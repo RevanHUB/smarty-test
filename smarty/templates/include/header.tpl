@@ -2,7 +2,14 @@
 <header>
   <div class="wrapper">
     <h2>
-      <a href="?action=">{$env['website_logo_title']}</a>
+      <a href="?action=">
+        {if $env['website_resources']['website_logo_url'] != null}
+          {assign var="logo_url" value=$env['website_resources']['website_logo_url']}
+            <img class="logo" src="{$logo_url}" alt="logo"/>
+
+        {/if}
+        {$env['website_logo_title']}
+      </a>
     </h2>
     <nav class="nav-desktop">
       {* Starts creation of buttons *}

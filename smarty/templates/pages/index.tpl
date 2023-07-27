@@ -32,15 +32,17 @@
                   <img src="{$banner.banner_src}" alt="{$banner.alt}">
                 </a>
                 </p>
-                  <h1 class="carousel-caption">{$banner.title}</h1>
+                <div class="carousel-caption d-none d-md-block">
+                  <h1 >{$banner.title}</h1>
+                </div>
               </div>
               {/foreach}
             </div><!-- .carousel-inner -->
+            <!-- carousel-controls -->
           <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
           <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
         </div><!-- .carousel -->
         <!-- end carousel -->
-    
       </section>
 
       <section class="container">

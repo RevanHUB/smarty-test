@@ -9,7 +9,7 @@
             "website_title" => "Website Title | PHP, Bootstrap, Smarty", // Changes title website on navigation Tab
             "website_logo_title" => "Website", // Changes business website name
             "website_resources" => array(
-                "website_logo_url" => null, // Changes logo URL on the header
+                "website_logo_url" => "img/generic/logos/logo_white.png", // Changes logo URL on the header
                 "website_favicon_url" => null, // Changes URL of favicon on navigation
             ),
             // Database information
