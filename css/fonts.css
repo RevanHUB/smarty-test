@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "glyphicons";
+    src: url('./../fonts/glyphicons-halflings-regular.woff');
+}
+
+@font-face {
+    font-family: 'poppins-regular';
+    src: url('./../fonts/poppins-regular.ttf');
+}
+
+
+@font-face {
+    font-family: 'poppins-bold';
+    src: url('./../fonts/poppins-bold.ttf');
+}
+
+@font-face {
+    font-family: 'poppins-semibold';
+    src: url('./../fonts/poppins-semibold.ttf');
+}
+
+

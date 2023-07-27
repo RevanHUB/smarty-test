@@ -1,7 +1,20 @@
 <?php
-// CONFIG: Smarty Location
-require("Smarty-lib/libs/Smarty.class.php");
-date_default_timezone_set('America/Los_Angeles');
+
+// Allows the user to dynamically change website values, changing one config file.
+include_once './smarty/configs/resource.environment.php';
+
+$local_path_default= false; // Change to TRUE to use your default Smarty Location 
+    
+if($local_path_default) {
+    // CONFIG: Smarty Location of the Original Fork 
+    require("Smarty-lib/libs/Smarty.class.php");
+} else {
+    // CONFIG: Smarty Location on this fork, currently using composer version of smarty
+    require './../vendor/autoload.php';
+}
+
+## I've changed the current time zone too.
+date_default_timezone_set('Europe/London');
 define("MY_PHP_ROOT", ".");
 
 $smarty = new Smarty();
@@ -23,22 +36,43 @@ $action = null;
 $params = array();
 $params["baseurl"] = "./";
 
+// Gets the action value passed via GET
 $action = safeGetString("action");
+
 $params = array();
 $params["baseurl"] = "./";
+
+// Set Environment Variables to be accessible globally 
+$params['env'] = $config;
+$env = $params['env'];
+
+// Routes System
 switch ($action) {
     case "":
-        // Load production data        
-        require("banners.json.php");
+        // Load production data
+        $banners_path = $env['website_banners_json_path'];
+        require($banners_path);
         $banners = json_decode($banners_json, TRUE);
         $params["banners"] = processData($banners);
-        $template = "index.tpl";
+        $template = "pages/index.tpl";
+        break; 
+    case "contact":  
+        require('smarty/plugins/function.validation.php');
+        $template = "pages/contact.tpl";
         break;
+    case "about":
+        $employees_path = $env['website_employees_json_path'];
+        require($employees_path);
+        $employees = json_decode($employees_json, TRUE);
+        $params["employees"] = processData($employees);
+        $template = "pages/about.tpl";
+        break;       
     default:
         if ($template == null) $template = $action . ".tpl";
 
         $templatePath = $smarty->getTemplateDir();
         if (!file_exists($templatePath[0] . $template)) {
+            
             $template = "index.tpl";
         }
         $num_of_slashes = substr_count($action, "/");
@@ -47,7 +81,6 @@ switch ($action) {
                 $params["baseurl"] .= "../";
             }
         }
-
         break;
 }
 
