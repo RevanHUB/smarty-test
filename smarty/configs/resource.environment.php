@@ -14,10 +14,10 @@
             ),
             // Database information
             "website_db_info" => array( // Changes db information
-                "IP" => 'localhost', 
+                "ip" => 'localhost', 
                 "user" => "root", 
-                "password" => "testing", 
-                "db_name" => "contact_db"
+                "password" => "", 
+                "db_name" => "assestment_contact"
             ),
             // contact
             "website_contact_email" => "example@example.com", // Changes contact form email 

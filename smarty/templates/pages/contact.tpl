@@ -37,26 +37,21 @@
                 <textarea class="form-control" name="message" value="test"></textarea>
 
                 {* Starts validation *}
-                {if isset($smarty.post.email) && isset($smarty.post.message && !empty($smarty.post.message))}
-                    {$validation = validationProcess($smarty.post.email, $smarty.post.message, $smarty.post.treatment)}
-                    
-                    {if $validation}
-                        <p id="validation" style="color: green">
-                            You entered correctly the data information, we'll contact you soon!
-                        </p>
-                    {else}
-                        <p id="validation"  style="color: red">You have an error on your information, please provide correct information.</p>
-                    {/if}
-
+                {if (isset($smarty.post.email) && isset($smarty.post.message) && !empty($smarty.post.message))}
+                    {assign var="email" value=filterData value=$smarty.post.email}
+                    {assign var="message" value=filterData value=$smarty.post.message}
+                    {assign var="treatment" value=filterData value=$smarty.post.treatment}
+                    {validation email=$email message=$message treatment=$treatment }
                 {else}
                     <p id="validation"  style="color: black">
                         Please enter the provided information.
                     </p>
                 {/if}
+       
                 
                 {* Ends validation *}
-                <button type="submit" class="btn btn-primary">Submit</button>
-                
+                <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+
             </form>
             {* Ends formulary *}
             {* Starts Contact Information *}

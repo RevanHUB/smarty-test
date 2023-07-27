@@ -1,5 +1,5 @@
 # A Smarty PHP Boilerplate Code
-
+```
 ##Overview
 This is a boilerplate code for Smarty PHP Template Framework
 
@@ -32,3 +32,12 @@ Included is [jQuery](http://jquery.com/) and [Twitter Bootstrap 3](http://getboo
 | |--templates
 | | ... Template folders and files
 | |--templates_c (should be created and writable by PHP)
+```
+ 
+## Instructions to use ✨
+
+Change on index.php:
+```
+    $local_path_default= false;  // change it to true
+```
+

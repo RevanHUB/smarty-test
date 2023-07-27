@@ -23,7 +23,7 @@ $smarty = new Smarty();
 //'templates' is where you store the files.
 $smarty->setTemplateDir(MY_PHP_ROOT . "/smarty/templates");
 //Create this directory if this does not exist
-$smarty->setCompileDir(MY_PHP_ROOT . "/smarty/templates_c");
+// $smarty->setCompileDir(MY_PHP_ROOT . "/smarty/templates_c");
 //Create this directory if this does not exist
 $smarty->setCacheDir(MY_PHP_ROOT . "/smarty/cache");
 //http://www.smarty.net/docs/en/config.files.tpl
@@ -46,6 +46,7 @@ $params["baseurl"] = "./";
 $params['env'] = $config;
 $env = $params['env'];
 
+
 // Routes System
 switch ($action) {
     case "":
@@ -57,7 +58,7 @@ switch ($action) {
         $template = "pages/index.tpl";
         break; 
     case "contact":  
-        require('smarty/plugins/function.validation.php');
+        // require('smarty/plugins/function.validation.php');
         $template = "pages/contact.tpl";
         break;
     case "about":
@@ -83,6 +84,7 @@ switch ($action) {
         }
         break;
 }
+
 
 if (isset($_POST)) {
     $smarty->assign("postValues", $_POST);
@@ -117,3 +119,5 @@ function processData($data)
     }
     return $data;
 }
+
+$smarty->clearCompiledTemplate('contact.tpl');

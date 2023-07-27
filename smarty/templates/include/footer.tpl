@@ -1,6 +1,8 @@
 {if !isset($baseurl) }
   {assign var="baseurl" value=""}
 {/if}
+
+{config_load "my.conf"}
         <footer>
           <nav>
             <h2>
@@ -20,7 +22,7 @@
             {* ends button creation *}
             </div>
           </nav>
-          <small> <a href="">Aviso Legal</a> | <a href="">Politica de Privacidad </a></small>
+          <small> <a href="">Legal</a> | <a href="">Privacy Policy </a> <a href="https://medanosol.es/en">{#pageMemory#}</a></small>
         </footer>
         <script type="text/javascript" src="{$baseurl}js/jquery.js"></script>
         <script type="text/javascript" src="{$baseurl}js/bootstrap.js"></script>
