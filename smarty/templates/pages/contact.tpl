@@ -1,24 +1,72 @@
 {include file='include/meta.tpl'}
 {include file='include/header.tpl'}
-{$treatmentOptions = array('Mr', 'Mrs', 'Miss', 'Ms')}
-    <section class="container">
-        <div class="generic-container generic-container-medium">
-            <h1>Generic Container</h1>
-            <a href="" >Generic button</a>
+    {capture assign="big_container"}
+        <div class="generic-wrapped-container generic-wrapped-container-big">
+        <div class="left-container">
+            <h1> Wrapped container big sized </h1>
+            <span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Donec tristique mattis dolor ac bibendum. Morbi euismod maximus diam, et placerat mauris finibus non. 
+            Donec fermentum a tortor nec pretium. Aenean tristique eleifend fringilla. 
+            </span>
+            <a href=""> Link Button </a>
         </div>
+        <div class="right-container">
+        </div>
+        </div>
+    {/capture}
+
+    {capture assign="medium_container"}
         <div class="generic-wrapped-container generic-wrapped-container-medium">
+        <div class="left-container">
+        <h1> Wrapped container medium sized </h1>
+        <span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Donec tristique mattis dolor ac bibendum. Morbi euismod maximus diam, et placerat mauris finibus non. 
+            Donec fermentum a tortor nec pretium. Aenean tristique eleifend fringilla. 
+            
+        </span>
+        <a href=""> Link Button </a>
+        </div>
+        <div class="right-container">
+        </div>
+    </div>
+    {/capture}
+
+    {capture assign="small_container"}
+        <div class="generic-wrapped-container generic-wrapped-container-small">
             <div class="left-container">
-              <h1> Wrapped container medium sized </h1>
-              <span> 
+            <h1> Wrapped container small sized </h1>
+            <span>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                 Donec tristique mattis dolor ac bibendum. Morbi euismod maximus diam, et placerat mauris finibus non. 
                 Donec fermentum a tortor nec pretium. Aenean tristique eleifend fringilla. 
-              </span>
-              <a href=""> Link Button </a>
+            </span>
+            <a href=""> Link Button </a>
             </div>
             <div class="right-container">
             </div>
         </div>
+    {/capture}
+    
+    {capture assign="generic_container"}
+        <div class="generic-container generic-container-big">
+        <h1>Generic Container</h1>
+        <span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Donec tristique mattis dolor ac bibendum. Morbi euismod maximus diam, et placerat mauris finibus non. 
+            Donec fermentum a tortor nec pretium. Aenean tristique eleifend fringilla. 
+        </span>
+        <a href="" >Generic button</a>
+        </div>
+    {/capture}
+
+    {$treatmentOptions = array('Mr', 'Mrs', 'Miss', 'Ms')}
+
+    {* Starts here *}
+    <section class="container">
+        {$generic_container}
+        {$medium_container}
     </section>
     <section class="container">
         <div class="form-wrapper">
@@ -47,13 +95,12 @@
                         Please enter the provided information.
                     </p>
                 {/if}
-       
-                
                 {* Ends validation *}
+
                 <button type="submit" class="btn btn-primary" name="submit">Submit</button>
 
-            </form>
-            {* Ends formulary *}
+            </form>  {* Ends formulary *}
+           
             {* Starts Contact Information *}
             <div class="image-form">
                 <h2>Let's talk</h2>
@@ -70,15 +117,8 @@
         
         </div>
 
-        <div class="generic-container-text-center generic-container-small">
-            <h2>Generic Container with Text Sample Title</h2>
-            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Donec tristique mattis dolor ac bibendum. Morbi euismod maximus diam, et placerat mauris finibus non. 
-            Donec fermentum a tortor nec pretium. Aenean tristique eleifend fringilla. 
-            
-            </span>
-            <a href="" >Generic button</a>
-        </div>
+        {$small_container}
        
     </section>
+    {* Ends here *}
 {include file='include/footer.tpl'}

@@ -10,7 +10,7 @@
             "website_logo_title" => "Website", // Changes business website name
             "website_resources" => array(
                 "website_logo_url" => "img/generic/logos/logo_white.png", // Changes logo URL on the header
-                "website_favicon_url" => null, // Changes URL of favicon on navigation
+                "website_favicon_url" => "img/generic/logos/logo_black.png", // Changes URL of favicon on navigation
             ),
             // Database information
             "website_db_info" => array( // Changes db information

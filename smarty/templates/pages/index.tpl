@@ -1,7 +1,8 @@
 {include file='include/meta.tpl'}
 {include file='include/header.tpl'}
 {assign var="default_banner" value="0"}
-      <section class="container">
+
+      {capture assign="big_container"}
         <div class="generic-wrapped-container generic-wrapped-container-big">
           <div class="left-container">
             <h1> Wrapped container big sized </h1>
@@ -15,6 +16,57 @@
           <div class="right-container">
           </div>
         </div>
+      {/capture}
+
+      {capture assign="medium_container"}
+        <div class="generic-wrapped-container generic-wrapped-container-medium">
+        <div class="left-container">
+          <h1> Wrapped container medium sized </h1>
+          <span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Donec tristique mattis dolor ac bibendum. Morbi euismod maximus diam, et placerat mauris finibus non. 
+            Donec fermentum a tortor nec pretium. Aenean tristique eleifend fringilla. 
+              
+          </span>
+          <a href=""> Link Button </a>
+        </div>
+        <div class="right-container">
+        </div>
+      </div>
+      {/capture}
+
+      {capture assign="small_container"}
+        <div class="generic-wrapped-container generic-wrapped-container-small">
+            <div class="left-container">
+              <h1> Wrapped container small sized </h1>
+              <span>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Donec tristique mattis dolor ac bibendum. Morbi euismod maximus diam, et placerat mauris finibus non. 
+                Donec fermentum a tortor nec pretium. Aenean tristique eleifend fringilla. 
+              </span>
+              <a href=""> Link Button </a>
+            </div>
+            <div class="right-container">
+            </div>
+        </div>
+      {/capture}
+      
+      {capture assign="generic_container"}
+        <div class="generic-container generic-container-big">
+          <h1>Generic Container</h1>
+          <span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Donec tristique mattis dolor ac bibendum. Morbi euismod maximus diam, et placerat mauris finibus non. 
+            Donec fermentum a tortor nec pretium. Aenean tristique eleifend fringilla. 
+          </span>
+          <a href="" >Generic button</a>
+        </div>
+      {/capture}
+
+
+      {* Add or replace containers from each *}
+      <section class="container">
+        {$big_container}
       </section>
 
       <section class="container">
@@ -44,62 +96,15 @@
         </div><!-- .carousel -->
         <!-- end carousel -->
       </section>
+    
+      <section class="container">
+        {$small_container}
+        {$generic_container}
+      </section>
 
       <section class="container">
-        <div class="generic-wrapped-container generic-wrapped-container-small">
-            <div class="left-container">
-              <h1> Wrapped container small sized </h1>
-              <span>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Donec tristique mattis dolor ac bibendum. Morbi euismod maximus diam, et placerat mauris finibus non. 
-                Donec fermentum a tortor nec pretium. Aenean tristique eleifend fringilla. 
-              </span>
-              <a href=""> Link Button </a>
-            </div>
-            <div class="right-container">
-            </div>
-        </div>
-      <div class="generic-container generic-container-big">
-        <h1>Generic Container</h1>
-        <span>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-          Donec tristique mattis dolor ac bibendum. Morbi euismod maximus diam, et placerat mauris finibus non. 
-          Donec fermentum a tortor nec pretium. Aenean tristique eleifend fringilla. 
-        </span>
-        <a href="" >Generic button</a>
-      </div>
-    </section>
-
-    <section class="container">
-        <div class="generic-wrapped-container generic-wrapped-container-medium">
-          <div class="left-container">
-            <h1> Wrapped container medium sized </h1>
-            <span>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-              Donec tristique mattis dolor ac bibendum. Morbi euismod maximus diam, et placerat mauris finibus non. 
-              Donec fermentum a tortor nec pretium. Aenean tristique eleifend fringilla. 
-                
-            </span>
-            <a href=""> Link Button </a>
-          </div>
-          <div class="right-container">
-          </div>
-        </div>
-
-        <div class="generic-wrapped-container generic-wrapped-container-medium">
-          <div class="left-container">
-            <h1> Wrapped container medium sized </h1>
-            <span>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-              Donec tristique mattis dolor ac bibendum. Morbi euismod maximus diam, et placerat mauris finibus non. 
-              Donec fermentum a tortor nec pretium. Aenean tristique eleifend fringilla. 
-                
-            </span>
-            <a href=""> Link Button </a>
-          </div>
-          <div class="right-container">
-          </div>
-        </div>
+        {$medium_container}
+        {$medium_container}
       </section>
    
 {include file='include/footer.tpl'}

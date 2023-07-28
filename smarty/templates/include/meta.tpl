@@ -14,6 +14,10 @@
     <link href="{$baseurl}css/carousel.css" rel="stylesheet">
     <link href="{$baseurl}css/style.css" rel="stylesheet">
     <link href="{$baseurl}css/responsive.css" rel="stylesheet">
+    {if $env['website_resources']['website_favicon_url'] != null}
+      {assign var="favicon_url" value=$env['website_resources']['website_favicon_url']}
+      <link href="{$baseurl}{$favicon_url}" type="image/png" rel="shortcut icon">
+    {/if}
     
   </head>
 
