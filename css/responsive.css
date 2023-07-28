@@ -4,62 +4,60 @@
 
 
 :root {
-
-    /* laptop */
-
-    /* container sizes */ 
-
+    /* Laptop */
+    /* Sizes */ 
     --container-small-laptop-size: 0;
     --container-medium-laptop-size: 0;
     --container-big-laptop-size: 0;
     --container-generic-center-laptop-size:70vh;
-
-    /* text size */
-
+    /* Generic */
     --container-generic-center-laptop-text-size: 1.6rem;
-    
+    /* Small */
     --container-small-laptop-h1-size:2rem;
     --container-small-laptop-span-size:1.6rem;
-
+    /* Medium */
     --container-medium-laptop-h1-size: 2.2rem;
     --container-medium-laptop-span-size: 1.8rem;
-    
+    /* Big */
     --container-big-laptop-h1-size:0;
     --container-big-laptop-span-size:0;
-    
-    /* tablet */
 
+    /* ---------------------------- */
+
+    /* Tablet */
     --container-wrapped-tablet-size: 70vh;
     --container-small-tablet-size: 0;
     --container-medium-tablet-size: 0;
     --container-big-tablet-size: 0;
-
+    /* Sizes */
     --container-wrapped-small-tablet-size: 70vh;
     --container-wrapped-medium-tablet-size: 80vh;
     --container-wrapped-big-tablet-size: 90vh;
-    
+    /* Small */
     --container-small-tablet-h1-size:2rem;
     --container-small-tablet-span-size:1.6rem;
-    
+    /* Medium */
     --container-medium-tablet-h1-size: 2.2rem;
     --container-medium-tablet-span-size: 1.8rem;
-    
+    /* Big */
     --container-big-tablet-h1-size:0;
     --container-big-tablet-span-size:0;
-
+    /* Generic */
     --container-generic-center-tablet-h1-size: 2.2rem;
     --container-generic-center-tablet-span-size: 1.8rem;
 
-    /* mobile */
+    /* ---------------------------- */
 
+    /* Mobile */
+
+    /* Sizes */
     --container-generic-center-mobile-size: 90vh;
     --container-wrapped-small-mobile-size: fit-content;
     --container-wrapped-medium-mobile-size: fit-content;
     --container-wrapped-big-mobile-size: fit-content;
-
+    /* Generic */
     --container-generic-center-tablet-h1-size: 2.2rem;
     --container-generic-center-tablet-span-size: 1.8rem;
-
 }
 
 
@@ -81,10 +79,9 @@
     section.container {
         max-width:1300px;
     }
-    /* .generic-container {
-        
-    } */
 
+
+    /* Responsive adjustments to Generic Containers on Laptops */ 
     .generic-container h1{
         width:80%;
         text-align:center;
@@ -130,6 +127,8 @@
     .generic-container-text-center h2 {
        text-align:center;
     }
+
+    /* Responsive adjustments to Formularies Containers on Laptops */ 
 
     .form-wrapper {
         height:80vh;
@@ -304,12 +303,12 @@
         max-width:800px;
     }
 
-    
+    /* Starts Responsive adjustments to Formularies */ 
+
     .form-wrapper {
         flex-direction:column;
         height:150vh;
     }
-
 
     .form-group {
         width:100%;
@@ -326,6 +325,9 @@
 
     }
 
+    /* Ends Responsive adjustments to Formularies */ 
+
+    /* Starts Responsive adjustments to Generic Containers */ 
 
     .generic-container-text-center h2 {
        width:90%;
@@ -341,6 +343,8 @@
     .generic-container-text-center a {
         font-size:var(--container-generic-center-tablet-span-size);
     }
+
+    /* Ends Responsive adjustments to Generic Containers */ 
 }
 
 @media screen and (max-width:900px) {
@@ -369,6 +373,8 @@
         height:90vh;
     }
 
+    /* Responsive adjustments to Generic Containers on Tablets */ 
+
     .generic-wrapped-container span {
         width:90%;
     }
@@ -394,6 +400,7 @@
     }
 
 
+    /* Ends Responsive adjustments to Generic Containers on Tablets */ 
 
 
 }
@@ -420,6 +427,7 @@
         font-size:2rem;
     }
 
+    /* Changes cards numbers displayed on row on Tablets */
     .generic-card-container .generic-card-wrapper {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -444,6 +452,8 @@
         height:50vh;
     }
     
+
+    /* Responsive adjustments to Generic Containers on Mobile */ 
 
     .generic-container-text-center  {
         height: var(--container-generic-center-mobile-size);
@@ -543,6 +553,8 @@
         padding:10px 20px 10px 20px;
     }
 
+    /* Ends Responsive adjustments to Generic Containers on Mobile */ 
+
 }
 
 @media screen and (max-width:400px) {
@@ -554,11 +566,11 @@
         max-width:400px;
     }
 
+    /* Responsive adjustments to Generic Containers on Mobile */ 
     .generic-container {
         height:80vh;
     }
-
-
+    /* Responsive adjustments to Generic Containers on Mobile */ 
 
 }
 
