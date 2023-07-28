@@ -41,3 +41,4 @@ Change on index.php:
     $local_path_default= false;  // change it to true
 ```
 You can change website information on smarty/configs/resource.environment.php.
+

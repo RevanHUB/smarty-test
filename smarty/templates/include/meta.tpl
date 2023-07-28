@@ -16,7 +16,9 @@
     <link href="{$baseurl}css/responsive.css" rel="stylesheet">
     {if $env['website_resources']['website_favicon_url'] != null}
       {assign var="favicon_url" value=$env['website_resources']['website_favicon_url']}
-      <link href="{$baseurl}{$favicon_url}" type="image/png" rel="shortcut icon">
+      <link rel="icon" type="image/png" href="{$favicon_url}" sizes="16x16">  
+      <link rel="icon" type="image/png" href="{$favicon_url}" sizes="32x32">
+      <link rel="icon" type="image/png" href="{$favicon_url}" sizes="96x96">
     {/if}
     
   </head>
